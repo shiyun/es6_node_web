@@ -1,0 +1,38 @@
+{{> header}}
+
+<section class="listWrap clearfix">
+	{{> aside}}	
+	<section class="listRight">
+		<section class="proveWrap proveState1">
+			<p class="tc c9 f12">输入您文件的唯一标示符（通常为业务订单号）获取存证签名唯一密钥（公证DNA），以继续出证流程</p>
+			<div class="tc mtb50">
+				<input type="text" placeholder="请输入您合同对应的唯一标示符" class="inp-orgInfo">
+			</div>
+			<p class="tc"><button class="btn-submit" id="btn-apply">提交</button></p>
+		</section>
+
+		<section class="proveWrap proveState2 hidden">
+			<div class="tc">
+				<p class="f16 tc c9 mb30" id="uploadInfo" data-normal="请选择并上传PDF格式的文件，以验证文件签署的真实性。" data-success="<span class='cred'>该文件为百事通电子签服务签署的原件，可放心使用！</span>" data-fail="<span class='cred'>该文件未通过验证。</span>">请选择并上传PDF格式的文件，以验证文件签署的真实性。</p>
+				<div class="btn-submit dib pr">
+					<span>点击上传您对应的合同原件</span>
+					<p class="processBar hidden"><span class="progressInner"></span><span class="progressTxt">0%</span></p>
+					<input type="file" id="upFile">	
+				</div>
+			</div>
+		</section>
+
+		<section class="proveWrap proveState3 hidden">
+			<p class="tc c9 f18">已收到您的出证申请，出证申请成功后，我们的客服将与您进行联系！</p>
+			<p class="tc mtb50"><img src="/images/icon_right.png"></p>
+			<p class="tc">
+				<a href="/prove" class="btns btn-prove">继续申请出证</a>
+				<a href="/list" class="btns btn-viewStatus ml30">去出证列表查看状态</a>
+			</p>
+		</section>
+	</section>
+</section>
+
+<script src="/js/prove.min.js"></script>
+</body>
+</html>

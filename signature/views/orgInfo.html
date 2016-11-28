@@ -1,0 +1,130 @@
+{{> header}}
+
+<section class="listWrap clearfix">
+	{{> aside}}	
+	<section class="listRight">
+		<ul class="list-orgInfo">		
+			{{#isEqual2 infoFull false orgInfo}}				
+				<li>
+					<span class="leftInfo"></span>			
+					<div class="rightInfo">
+						<p class="mb30 f12 c9">请填写您用于电子签存服务的机构信息，以便为您注册颁发机构CA证书。</p>
+					</div>
+				</li>			
+				<li>
+					<span class="leftInfo">机构名称</span>
+					<div class="rightInfo">					
+						<input type="text" placeholder="请输入机构名称" class="inp-orgInfo" id="name" data-err="机构名称填写错误">
+					</div>
+				</li>
+				<li>
+					<span class="leftInfo">机构类型</span>
+					<div class="rightInfo">
+						<select class="select-orgInfo" data-err="请选择企业类型">
+							<option value="-1" selected>请选择企业类型</option>
+							<option value="0">普通企业</option>
+							<option value="1">社会团体</option>
+							<option value="2">事业单位</option>
+							<option value="3">民办非企业单位</option>
+							<option value="4">党政及国家机构</option>
+						</select>
+					</div>
+				</li>
+				<li>
+					<span class="leftInfo">组织机构代码号</span>
+					<div class="rightInfo">
+						<input type="text" placeholder="请输入组织机构代码号或社会信用代码号" class="inp-orgInfo" id="organCode" data-err="组织机构代码号填写错误">
+					</div>
+				</li>
+				<li>
+					<span class="leftInfo">法定代表姓名</span>
+					<div class="rightInfo">
+						<input type="text" placeholder="请输入法定代表姓名" class="inp-orgInfo" id="legalName" data-err="法定代表姓名填写错误">
+					</div>
+				</li>
+				<li>
+					<span class="leftInfo">法定代表身份证号</span>
+					<div class="rightInfo">
+						<input type="text" placeholder="请输入法定代表身份证号/护照号" class="inp-orgInfo" id="legalIdNo" data-err="法定代表身份证号填写错误">
+					</div>
+				</li>
+				<li>
+					<span class="leftInfo">联系邮箱</span>
+					<div class="rightInfo">
+						<input type="text" placeholder="请输入企业联系邮箱" class="inp-orgInfo" id="email" data-err="联系邮箱填写错误">
+					</div>
+				</li>
+				<li>
+					<span class="leftInfo">联系电话</span>
+					<div class="rightInfo">
+						<input type="text" placeholder="请输入企业联系电话（建议为签存服务负责人的手机号）" id="mobile" class="inp-orgInfo" maxlength="11" data-err="联系电话填写错误">
+					</div>
+				</li>
+				<li>
+					<span class="leftInfo"></span>
+					<div class="rightInfo">
+						<p class="mt30"><button class="btn-submit">确认无误，提交</button></p>
+					</div>
+				</li>
+			{{else}}
+				<li>
+					<p class="mb30 f12 c9">以下是您用于电子签存服务的企业信息：</p>
+				</li>			
+				<li>
+					<span class="leftInfo">机构名称</span>
+					<div class="rightInfo">					
+						<p class="c3 f14">{{name}}</p>	
+					</div>
+				</li>
+				<li>
+					<span class="leftInfo">机构类型</span>
+					<div class="rightInfo">
+						<p class="c3 f14">{{orgType organType}}</p>	
+					</div>
+				</li>
+				<li>
+					<span class="leftInfo">组织机构代码号</span>
+					<div class="rightInfo">
+						<p class="c3 f14">{{organCode}}</p>	
+					</div>
+				</li>
+				<li>
+					<span class="leftInfo">法定代表姓名</span>
+					<div class="rightInfo">
+						<p class="c3 f14">{{legalName}}</p>	
+					</div>
+				</li>
+				<li>
+					<span class="leftInfo">法定代表身份证号</span>
+					<div class="rightInfo">
+						<p class="c3 f14">{{legalIdNo}}</p>	
+					</div>
+				</li>
+				<li>
+					<span class="leftInfo">联系邮箱</span>
+					<div class="rightInfo">
+						<p class="c3 f14">{{email}}</p>	
+					</div>
+				</li>
+				<li>
+					<span class="leftInfo">联系电话</span>
+					<div class="rightInfo">
+						<p class="c3 f14">{{mobile}}</p>	
+					</div>
+				</li>
+				<li>
+					<span class="leftInfo">电子签存账户ID</span>
+					<div class="rightInfo">
+						<p class="c3 f14">{{accountId}}</p>	
+					</div>
+				</li>
+			{{/isEqual2}}
+		</ul>
+	</section>
+</section>
+
+<input type="hidden" id="orgInfo" value="{{orgInfo}}">
+
+<script src="/js/orgInfo.min.js"></script>
+</body>
+</html>

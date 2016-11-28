@@ -1,0 +1,21 @@
+{{> header}}
+
+<section class="loginWrap">
+	<div class="onlineProveWrap">
+		<section class="onlineProve">
+			<p class="txt-welcome mt20"><img src="/images/login/txt_prove.png"></p>
+			<p class="f16 tc c9" id="uploadInfo" data-normal="请选择并上传PDF格式的文件，以验证文件签署的真实性。" data-success="<span class='cred'>该文件为百事通电子签服务签署的原件，可放心使用！</span>" data-fail="<span class='cred'>该文件未通过验证。</span>">请选择并上传PDF格式的文件，以验证文件签署的真实性。</p>
+			<div class="mtb50 tc">
+				<div class="btn-login cp oh pr">
+					<img src="/images/login/txt_btn2.png" class="vm">
+					<p class="processBar hidden"><span class="progressInner"></span><span class="progressTxt">0%</span></p>
+					<input type="file" id="upFile">				
+				</div>
+			</div>
+		</section>
+	</div>
+</section>
+
+<script src="/js/onlineProve.min.js"></script>
+</body>
+</html>

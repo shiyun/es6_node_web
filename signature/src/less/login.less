@@ -1,0 +1,34 @@
+@lurl: '../images/login';
+
+.inpLogin {height:42px;line-height:42px;width:482px;border-radius:4px;}
+.loginWrap {
+	&:extend(.oh,.pr);height:100%;background:url("@{lurl}/bg.jpg") center no-repeat #C82B00 /cover;
+}
+.loginForm {
+	&:extend(.bgWhite,.pa);width:600px;height:374px;border-radius:8px;margin-top:115px;box-shadow: 0 4px 10px rgba(0,0,0,.4);left:50%;top:50%;margin:-187px 0 0 -250px;
+}
+.txt-welcome {
+	&:extend(.tc);padding:40px 0;
+}
+.list-login {
+	&:extend(.mau);width:482px;
+	li {&:extend(.mb20);}
+}
+.btn-login {
+	&:extend(.tc,.dib,.inpLogin);background-color:#FF491A;
+}
+.inp-login {
+	&:extend(.f16,.c3,.noBorder,.inpLogin);padding:0 10px;box-sizing:border-box;background-color:#F5F5F5;
+	&::placeholder {&:extend(.c9);}
+}
+.icon-pen {
+	&:extend(.pa);height:150px;width:155px;background:url("@{lurl}/icon_pen.png") no-repeat;bottom:0;right:0;transform: translate(10%,55%);
+}
+
+//onlineProve
+.onlineProveWrap {
+	&:extend(.oh,.pr);height:100%;background:url("@{lurl}/bg2.jpg") center no-repeat /cover;
+}
+.onlineProve {
+	&:extend(.bgWhite,.pa);width:600px;border-radius:8px;margin-top:115px;box-shadow: 0 4px 10px rgba(0,0,0,.4);left:50%;top:50%;margin:-187px 0 0 -250px;
+}

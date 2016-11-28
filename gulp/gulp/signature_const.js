@@ -1,0 +1,1 @@
+export const signArr = ['index', 'login', 'list', 'orgInfo', 'prove', 'onlineProve'];
